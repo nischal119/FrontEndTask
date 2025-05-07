@@ -7,9 +7,23 @@
   <title>Modern Inventory | Products</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="light-mode">
+  <div class="fixed-background"></div>
+  <div class="animated-shapes">
+    <svg class="shape shape-1" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="currentColor" opacity="0.1" />
+    </svg>
+    <svg class="shape shape-2" viewBox="0 0 100 100">
+      <rect x="20" y="20" width="60" height="60" fill="currentColor" opacity="0.1" />
+    </svg>
+    <svg class="shape shape-3" viewBox="0 0 100 100">
+      <polygon points="50,20 80,80 20,80" fill="currentColor" opacity="0.1" />
+    </svg>
+  </div>
+
   <nav class="navbar">
     <div class="nav-brand">
       <h1>Modern<span>Inventory</span></h1>
@@ -25,38 +39,41 @@
 
   <main class="inventory-page">
     <div class="inventory-header">
+      <div class="inventory-actions">
+        <button class="back-btn" onclick="window.location.href='index.html'">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
       <h1>Our Products</h1>
       <div class="view-controls">
-        <button id="grid-view" class="view-btn active">
-          <i class="fas fa-th"></i>
-        </button>
-        <button id="list-view" class="view-btn">
-          <i class="fas fa-list"></i>
-        </button>
+        <button class="view-btn grid-view active"><i class="fas fa-th"></i></button>
+        <button class="view-btn list-view"><i class="fas fa-list"></i></button>
       </div>
     </div>
 
-    <div class="filters">
+    <div class="filters-section">
       <div class="search-bar">
-        <input type="text" id="search" placeholder="Search products...">
         <i class="fas fa-search"></i>
+        <input type="text" class="search-input" placeholder="Search products...">
       </div>
-      <div class="filter-options">
-        <select id="category-filter">
-          <option value="">All Categories</option>
+      <div class="filter-controls">
+        <select class="category-filter">
+          <option value="all">All Categories</option>
           <option value="electronics">Electronics</option>
           <option value="clothing">Clothing</option>
           <option value="books">Books</option>
         </select>
-        <select id="sort-by">
-          <option value="name">Sort by Name</option>
+        <select class="sort-select">
+          <option value="">Sort By</option>
           <option value="price-low">Price: Low to High</option>
           <option value="price-high">Price: High to Low</option>
+          <option value="rating">Rating</option>
         </select>
+        <button class="clear-filter-btn" id="clearFilterBtn">Clear Filter</button>
       </div>
     </div>
 
-    <div class="products-grid" id="products-container">
+    <div class="products-grid">
       <!-- Products will be dynamically loaded here -->
     </div>
   </main>
