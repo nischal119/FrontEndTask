@@ -1,0 +1,238 @@
+/* New Arrivals Section */
+.new-arrivals {
+  padding: 4rem 5%;
+  background: var(--background-color);
+}
+
+.section-header {
+  position: static;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.carousel-container {
+  position: relative;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.carousel-btn {
+  pointer-events: auto;
+  background: var(--card-bg);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(33.333% - 1.33rem);
+  min-width: 300px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.carousel-slide:focus {
+  outline: 2px solid var(--primary-color);
+  z-index: 1;
+}
+
+.arrival-card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: transform 0.3s ease;
+  max-width: 320px;
+  min-width: 280px;
+  width: 100%;
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrival-card:hover {
+  transform: translateY(-5px);
+}
+
+.arrival-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.arrival-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.arrival-card:hover .arrival-image img {
+  transform: scale(1.05);
+}
+
+.arrival-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.arrival-content {
+  padding: 1.25rem;
+}
+
+.arrival-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.arrival-content p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.arrival-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.arrival-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.arrival-btn:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .carousel-slide {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  .carousel-controls {
+    top: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+  .carousel-controls {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  .arrival-card {
+    max-width: 90vw;
+    min-width: 70vw;
+    flex: 0 0 80vw;
+  }
+  .arrival-image {
+    height: 140px;
+  }
+}
+
+/* Infinite Scroll Animation */
+.infinite-scroll-row {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: infinite-scroll 30s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hide scrollbar for smooth look */
+.infinite-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Remove carousel controls for this effect */
+.carousel-controls {
+  display: none !important;
+}

@@ -1,0 +1,145 @@
+/* Utility Classes */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  color: white;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatShape {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+/* Fixed Background */
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, var(--background-color), var(--card-bg));
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Animated Shapes */
+.animated-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--primary-color);
+  top: -150px;
+  left: -150px;
+  animation: floatShape 20s infinite;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: var(--secondary-color);
+  bottom: -100px;
+  right: -100px;
+  animation: floatShape 15s infinite reverse;
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  background: var(--accent-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatShape 25s infinite;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.no-results i {
+  font-size: 3rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: var(--text-secondary);
+}

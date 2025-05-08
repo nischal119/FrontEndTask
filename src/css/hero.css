@@ -1,0 +1,356 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 5%;
+  background: linear-gradient(135deg, var(--background-color), var(--card-bg));
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px var(--shadow-color);
+}
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.floating-product {
+  position: absolute;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-product.left {
+  top: 20%;
+  left: -20%;
+  animation-delay: 0s;
+}
+
+.floating-product.right {
+  bottom: 20%;
+  right: -20%;
+  animation-delay: 2s;
+}
+
+.float-product-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.float-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.float-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.product-mini-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.product-mini-price {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.animated-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 4rem;
+}
+.hero-main {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 5%;
+  background: linear-gradient(135deg, var(--background-color), var(--card-bg));
+  overflow: hidden;
+  margin-bottom: 5rem;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.hero-tag:hover {
+  transform: translateY(-5px);
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  position: relative;
+}
+
+.hero-content h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  border-radius: 2px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left: 4rem;
+  z-index: 2;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px var(--shadow-color);
+  transform: perspective(1000px) rotateY(-15deg);
+  transition: transform 0.5s ease;
+}
+
+.hero-image-container:hover img {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(124, 58, 237, 0.2),
+    rgba(79, 70, 229, 0.2)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 2rem;
+}
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+.float-top-left {
+  top: 8%;
+  left: 3%;
+}
+.float-bottom-right {
+  bottom: 10%;
+  right: 5%;
+}
+.float-mid-right {
+  top: 45%;
+  right: 10%;
+}
+.floating-element {
+  position: absolute;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.85;
+  filter: blur(0.5px);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .hero-main,
+  .hero {
+    flex-direction: column;
+    padding: 2.5rem 2% 1.5rem 2%;
+    min-height: unset;
+    margin-bottom: 2rem;
+  }
+  .hero-content {
+    max-width: 100%;
+    padding: 0;
+    z-index: 2;
+  }
+  .hero-image-container {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .hero-image-container img {
+    border-radius: 1rem;
+  }
+  .floating-elements {
+    display: none !important;
+  }
+}

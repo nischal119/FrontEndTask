@@ -1,0 +1,11 @@
+/* Import all CSS files */
+@import "variables.css";
+@import "navbar.css";
+@import "hero.css";
+@import "categories.css";
+@import "product-card.css";
+@import "inventory.css";
+@import "new-arrivals.css";
+@import "features-reviews.css";
+@import "footer.css";
+@import "utilities.css";

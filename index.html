@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Inventory | Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="src/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -78,78 +78,125 @@
     <section id="new-arrivals" class="new-arrivals">
       <div class="section-header">
         <h2>New Arrivals</h2>
-        <div class="carousel-controls">
-          <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-          <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
-        </div>
       </div>
-      <div class="carousel-container">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <div class="arrival-card">
-              <div class="arrival-image">
-                <img
-                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                  alt="Premium Headphones">
-                <span class="arrival-tag">New</span>
-              </div>
-              <div class="arrival-content">
-                <h3>Premium Wireless Headphones</h3>
-                <p>Immerse yourself in crystal-clear audio with our latest wireless headphones. Designed for the modern
-                  listener.</p>
-                <div class="arrival-price">$299.99</div>
-                <a href="inventory.html" class="arrival-btn">Shop Now</a>
-              </div>
+      <div class="infinite-scroll-wrapper">
+        <div class="infinite-scroll-row">
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Premium Headphones">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Premium Wireless Headphones</h3>
+              <p>Immerse yourself in crystal-clear audio with our latest wireless headphones. Designed for the modern
+                listener.</p>
+              <div class="arrival-price">$299.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
             </div>
           </div>
-          <div class="carousel-slide">
-            <div class="arrival-card">
-              <div class="arrival-image">
-                <img
-                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                  alt="Smart Watch">
-                <span class="arrival-tag">New</span>
-              </div>
-              <div class="arrival-content">
-                <h3>Smart Watch Series 5</h3>
-                <p>Stay connected and track your fitness with our latest smart watch. Water-resistant and features a
-                  stunning AMOLED display.</p>
-                <div class="arrival-price">$399.99</div>
-                <a href="inventory.html" class="arrival-btn">Shop Now</a>
-              </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Smart Watch">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Smart Watch Series 5</h3>
+              <p>Stay connected and track your fitness with our latest smart watch. Water-resistant and features a
+                stunning AMOLED display.</p>
+              <div class="arrival-price">$399.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
             </div>
           </div>
-          <div class="carousel-slide">
-            <div class="arrival-card">
-              <div class="arrival-image">
-                <img
-                  src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                  alt="Designer Backpack">
-                <span class="arrival-tag">New</span>
-              </div>
-              <div class="arrival-content">
-                <h3>Designer Backpack</h3>
-                <p>Stylish and functional backpack with multiple compartments. Perfect for work, travel, or everyday
-                  use.</p>
-                <div class="arrival-price">$129.99</div>
-                <a href="inventory.html" class="arrival-btn">Shop Now</a>
-              </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Designer Backpack">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Designer Backpack</h3>
+              <p>Stylish and functional backpack with multiple compartments. Perfect for work, travel, or everyday
+                use.</p>
+              <div class="arrival-price">$129.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
             </div>
           </div>
-          <div class="carousel-slide">
-            <div class="arrival-card">
-              <div class="arrival-image">
-                <img
-                  src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                  alt="Classic Denim Jacket">
-                <span class="arrival-tag">New</span>
-              </div>
-              <div class="arrival-content">
-                <h3>Classic Denim Jacket</h3>
-                <p>Timeless denim jacket with modern fit. Perfect for layering in any season.</p>
-                <div class="arrival-price">$89.99</div>
-                <a href="inventory.html" class="arrival-btn">Shop Now</a>
-              </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Classic Denim Jacket">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Classic Denim Jacket</h3>
+              <p>Timeless denim jacket with modern fit. Perfect for layering in any season.</p>
+              <div class="arrival-price">$89.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
+            </div>
+          </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Premium Headphones">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Premium Wireless Headphones</h3>
+              <p>Immerse yourself in crystal-clear audio with our latest wireless headphones. Designed for the modern
+                listener.</p>
+              <div class="arrival-price">$299.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
+            </div>
+          </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Smart Watch">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Smart Watch Series 5</h3>
+              <p>Stay connected and track your fitness with our latest smart watch. Water-resistant and features a
+                stunning AMOLED display.</p>
+              <div class="arrival-price">$399.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
+            </div>
+          </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Designer Backpack">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Designer Backpack</h3>
+              <p>Stylish and functional backpack with multiple compartments. Perfect for work, travel, or everyday
+                use.</p>
+              <div class="arrival-price">$129.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
+            </div>
+          </div>
+          <div class="arrival-card">
+            <div class="arrival-image">
+              <img
+                src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Classic Denim Jacket">
+              <span class="arrival-tag">New</span>
+            </div>
+            <div class="arrival-content">
+              <h3>Classic Denim Jacket</h3>
+              <p>Timeless denim jacket with modern fit. Perfect for layering in any season.</p>
+              <div class="arrival-price">$89.99</div>
+              <a href="inventory.html" class="arrival-btn">Shop Now</a>
             </div>
           </div>
         </div>
@@ -234,57 +281,111 @@
 
     <section class="reviews-section">
       <h2>What Our Customers Say</h2>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-header">
-            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sarah Johnson" class="review-avatar">
-            <div>
-              <h3>Sarah Johnson</h3>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+      <div class="infinite-scroll-wrapper">
+        <div class="infinite-scroll-row">
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sarah Johnson" class="review-avatar">
+              <div>
+                <h3>Sarah Johnson</h3>
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
             </div>
+            <p class="review-content">"Amazing selection of products and lightning-fast delivery. The quality is
+              outstanding!"</p>
           </div>
-          <p class="review-content">"Amazing selection of products and lightning-fast delivery. The quality is
-            outstanding!"</p>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Michael Chen" class="review-avatar">
-            <div>
-              <h3>Michael Chen</h3>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Michael Chen" class="review-avatar">
+              <div>
+                <h3>Michael Chen</h3>
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
               </div>
             </div>
+            <p class="review-content">"The customer service is exceptional. They helped me find exactly what I needed."
+            </p>
           </div>
-          <p class="review-content">"The customer service is exceptional. They helped me find exactly what I needed."
-          </p>
-        </div>
-        <div class="review-card">
-          <div class="review-header">
-            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Emma Davis" class="review-avatar">
-            <div>
-              <h3>Emma Davis</h3>
-              <div class="review-stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Emma Davis" class="review-avatar">
+              <div>
+                <h3>Emma Davis</h3>
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
               </div>
             </div>
+            <p class="review-content">"I love the modern design and user-friendly interface. Shopping here is a
+              pleasure!"
+            </p>
           </div>
-          <p class="review-content">"I love the modern design and user-friendly interface. Shopping here is a pleasure!"
-          </p>
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sarah Johnson" class="review-avatar">
+              <div>
+                <h3>Sarah Johnson</h3>
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-content">"Amazing selection of products and lightning-fast delivery. The quality is
+              outstanding!"</p>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Michael Chen" class="review-avatar">
+              <div>
+                <h3>Michael Chen</h3>
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-content">"The customer service is exceptional. They helped me find exactly what I needed."
+            </p>
+          </div>
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Emma Davis" class="review-avatar">
+              <div>
+                <h3>Emma Davis</h3>
+                <div class="review-stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-content">"I love the modern design and user-friendly interface. Shopping here is a
+              pleasure!"</p>
+          </div>
         </div>
       </div>
     </section>
