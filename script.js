@@ -161,9 +161,8 @@ function renderProducts(products, container) {
   }
 
   container.innerHTML = products
-    .map((product) =>
-      isListView
-        ? `
+    .map(
+      (product) => `
       <div class="product-card">
         <div class="product-image">
           <img src="${product.image}" alt="${product.name}">
@@ -181,27 +180,6 @@ function renderProducts(products, container) {
           <button onclick="addToCart(${product.id})" class="add-to-cart">
             <i class="fas fa-shopping-cart"></i> Add to Cart
           </button>
-        </div>
-      </div>
-    `
-        : `
-      <div class="product-card">
-        <div class="product-image">
-          <img src="${product.image}" alt="${product.name}">
-          <div class="product-overlay">
-            <button onclick="addToCart(${product.id})" class="add-to-cart">
-              <i class="fas fa-shopping-cart"></i> Add to Cart
-            </button>
-          </div>
-        </div>
-        <div class="product-info">
-          <h3>${product.name}</h3>
-          <div class="product-rating">
-            ${generateStars(product.rating)}
-            <span>(${product.reviews})</span>
-          </div>
-          <p class="product-price">$${product.price.toFixed(2)}</p>
-          <p class="product-description">${product.description}</p>
         </div>
       </div>
     `
