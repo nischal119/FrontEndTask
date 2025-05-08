@@ -1,0 +1,9 @@
+export const productsContainer = document.querySelector(".products-grid");
+export const featuredGrid = document.querySelector(".featured-grid");
+export const searchInput = document.querySelector(".search-input");
+export const categoryFilter = document.querySelector(".category-filter");
+export const sortSelect = document.querySelector(".sort-select");
+export const gridViewBtn = document.querySelector(".grid-view");
+export const listViewBtn = document.querySelector(".list-view");
+export const themeToggle = document.getElementById("theme-toggle");
+export const clearFilterBtn = document.getElementById("clearFilterBtn");
