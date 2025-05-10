@@ -4,6 +4,7 @@ function switchView(view) {
   if (!productsContainer) return;
   if (view === "grid") {
     productsContainer.classList.remove("list-view");
+
     gridViewBtn.classList.add("active");
     listViewBtn.classList.remove("active");
   } else {
